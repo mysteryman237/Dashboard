@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <aside id="side-bar">
+      <div id="side-icon"><i class="fa-solid fa-x"></i></div>
+      <span class="logo"><a href=""><i class="fa-solid fa-blog"></i></a></span>
+      <nav>
+        <ul id="primary-navigation">
+          <li class="dash-board">
+            <a href=""><i class="fa-solid fa-house"></i> DashBoard</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-chart-bar"></i> Analytics</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-users"></i> Customers</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-dolly"></i> Orders</a>
+          </li>
+        </ul>
+        <ul id="secondary-navigation">
+          <li>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i> Products</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-cc-visa"></i> Payments</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-comments"></i> Messages</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-calendar"></i> Calender</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-gears"></i> Setting</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="" class="user">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+      >
+    </aside>
+    <div class="overlay"></div>
+    <nav id="main-nav">
+      <span id="dashboard-brand">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+        DashBoard</span
+      >
+      <div id="nav-actions">
+        <span id="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i
+        ></span>
+        <input type="text" placeholder="search" />
+        <div id="action-container">
+          <span id="action-icon"> <i class="fa-solid fa-bell"></i></span>
+          <ul>
+            <li class="li-icon">
+              <a href=""><i class="fa-solid fa-bell"></i></a>
+            </li>
+            <li class="li-icon">
+              <a href=""><i class="fa-solid fa-gears"></i></a>
+            </li>
+            <li class="li-icon">
+              <a href=""><i class="fa-solid fa-circle-half-stroke"></i></a>
+            </li>
+            <li class="li-string"><a href="">Notification</a></li>
+            <li class="li-string"><a href="">Settings</a></li>
+            <li class="li-string"><a href="">Themes</a></li>
+          </ul>
+        </div>
+      </div>
+      <span><i class="fa-solid fa-user"></i></span>
+    </nav>
+    <main id="main-board">
+      <section class="cards-container">
+        <article class="card revenue">
+          <header class="card-header">
+            <div>
+              <i class="fa-solid fa-chart-line"></i>
+              <p>Revenue</p>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </header>
+          <div class="card-body">
+            <strong>$3,5134</strong>
+          </div>
+          <footer class="card-footer">
+            <div>
+              <i class="fa-solid fa-caret-up"></i>
+              <p><span>+20%</span> this month</p>
+            </div>
+          </footer>
+        </article>
+        <article class="card customer">
+          <header class="card-header">
+            <div>
+              <i class="fa-solid fa-users"></i>
+              <p>Customers</p>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </header>
+          <div class="card-body">
+            <strong>1,734</strong>
+          </div>
+          <footer class="card-footer">
+            <div>
+              <i class="fa-solid fa-caret-up"></i>
+              <p><span>+5%</span> this month</p>
+            </div>
+          </footer>
+        </article>
+        <article class="card orders">
+          <header class="card-header">
+            <div>
+              <i class="fa-solid fa-cart-arrow-down"></i>
+              <p>Orders</p>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </header>
+          <div class="card-body">
+            <strong>534</strong>
+          </div>
+          <footer class="card-footer">
+            <div>
+              <i class="fa-solid fa-caret-up"></i>
+              <p><span>+10%</span> this month</p>
+            </div>
+          </footer>
+        </article>
+        <article class="card profit">
+          <header class="card-header">
+            <div>
+              <i class="fa-solid fa-chart-line"></i>
+              <p>Profit</p>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </header>
+          <div class="card-body">
+            <strong>$1,134</strong>
+          </div>
+          <footer class="card-footer">
+            <div>
+              <i class="fa-solid fa-caret-down"></i>
+              <p><span>+11%</span> this month</p>
+            </div>
+          </footer>
+        </article>
+      </section>
+      <section class="chart-section">
+        <article class="chart revenue-chart">
+          <header class="chart-head">
+            <div class="left-header">
+              <h3>Revenue trend</h3>
+            </div>
+            <div class="right-header">
+              <p>This month <i class="fa-solid fa-caret-up"></i></p>
+            </div>
+          </header>
+          <div class="chart-body">
+            <ul class="y-axis">
+              <li>50k</li>
+              <li>40k</li>
+              <li>30k</li>
+              <li>20k</li>
+              <li>10k</li>
+            </ul>
+            <div class="plot-area">
+              <div class="chart-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <ul class="graph">
+                <li>
+                  <div class="bar first-bar"></div>
+                  <span class="chart-value"></span>
+                </li>
+                <li>
+                  <div class="bar second-bar"></div>
+                  <span class="chart-value"></span>
+                </li>
+                <li>
+                  <div class="bar third-bar"></div>
+                  <span class="chart-value"></span>
+                </li>
+                <li>
+                  <div class="bar fourth-bar"></div>
+                  <span class="chart-value"></span>
+                </li>
+              </ul>
+            </div>
+            <ul class="x-axis">
+              <li>Jan</li>
+              <li>Feb</li>
+              <li>Mar</li>
+              <li>Apr</li>
+              <li>May</li>
+            </ul>
+          </div>
+          <footer>
+            <div class="chart-summary">
+              <span class="first"><i class="fa-solid fa-arrow-up"></i>18%</span>
+              <p>Compared to last month</p>
+            </div>
+          </footer>
+        </article>
+        <article class="chart revenue-chart">
+          <header class="chart-head">
+            <div class="left-header">
+              <h3>Revenue trend</h3>
+            </div>
+            <div class="right-header">
+              <p>This month <i class="fa-solid fa-caret-down"></i></p>
+            </div>
+          </header>
+          <div class="chart-body">
+            <ul class="y-axis">
+              <li>50k</li>
+              <li>40k</li>
+              <li>30k</li>
+              <li>20k</li>
+              <li>10k</li>
+            </ul>
+            <div class="plot-area">
+              <div class="chart-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <ul class="graph">
+                <li>
+                  <div class="bar first-bar"></div>
+                  <span class="chart-value"></span>
+                </li>
+                <li>
+                  <div class="bar second-bar"></div>
+                  <span class="chart-value"></span>
+                </li>
+                <li>
+                  <div class="bar third-bar"></div>
+                  <span class="chart-value"></span>
+                </li>
+                <li>
+                  <div class="bar fourth-bar"></div>
+                  <span class="chart-value"></span>
+                </li>
+                <li>
+                  <div class="bar five-bar"></div>
+                  <span class="chart-value"></span>
+                </li>
+              </ul>
+            </div>
+            <ul class="x-axis">
+              <li>Jan</li>
+              <li>Feb</li>
+              <li>Mar</li>
+              <li>Apr</li>
+              <li>May</li>
+            </ul>
+          </div>
+          <footer>
+            <div class="chart-summary">
+              <span class="second"><i class="fa-solid fa-arrow-down"></i>7%</span>
+              <p>Compared to last month</p>
+            </div>
+          </footer>
+        </article>
+      </section>
+      <section class="activity-section">
+        <section class="activity-container">
+          <header class="activity-header">
+            <h3>Recent Activity</h3>
+            <button class="btn">View All</button>
+          </header>
+          <section class="activity-group">
+            <article class="activity-card">
+              <h4>Today</h4>
+              <ul>
+                <li>
+                  <span class="activity-icon"><i class="fa-solid fa-coins"></i></span>
+                  <div class="activity-content">
+                    <p class="activity-title">Mark placed an order</p>
+                    <span class="activity-subtitle">#231-1</span>
+                  </div>
+                  <p class="activity-time">2 minutes ago</p>
+                </li>
+                <li>
+                  <span class="activity-icon"><i class="fa-brands fa-cc-visa"></i></span>
+                  <div class="activity-content">
+                    <p class="activity-title">Samuel made a payment</p>
+                    <span class="activity-subtitle">#231-1</span>
+                  </div>
+                  <p class="activity-time">6 minutes ago</p>
+                </li>
+              </ul>
+            </article>
+            <article class="activity-card">
+              <h4>Yesterday</h4>
+              <ul>
+                <li>
+                  <span class="activity-icon"><i class="fa-solid fa-coins"></i></span>
+                  <div class="activity-content">
+                    <h5 class="activity-title">Mark placed and order</h5>
+                    <span class="activity-subtitle">#231-1</span>
+                  </div>
+                  <p class="activity-time">2 minutes ago</p>
+                </li>
+                <li>
+                  <span class="activity-icon"><i class="fa-brands fa-cc-visa"></i></span>
+                  <div class="activity-content">
+                    <h5 class="activity-title">Samuel made a payment</h5>
+                    <span class="activity-subtitle">#231-1</span>
+                  </div>
+                  <p class="activity-time">6 minutes ago</p>
+                </li>
+              </ul>
+            </article>
+          </section>
+        </section>
+      </section>
+      <section class="table-section">
+        <table>
+          <thead class="table-head">
+            <tr>
+              <th>Order</th>
+              <th>Customer</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+            <tr>
+              <td>#9674</td>
+              <td>Peter</td>
+              <td class="amout">$30</td>
+              <td class="status">Pending</td>
+            </tr>
+            <tr>
+              <td>#1322</td>
+              <td>James</td>
+              <td class="amount">$15</td>
+              <td class="status">Delivered</td>
+            </tr>
+            <tr>
+              <td>#2457</td>
+              <td>John</td>
+              <td class="amount">$10</td>
+              <td class="status">Pending</td>
+            </tr>
+            <tr>
+              <td>#9345</td>
+              <td>Andrew</td>
+              <td class="amount">$15</td>
+              <td class="status">Cancelled</td>
+            </tr>
+          </tbody>
+          <tfoot class="table-foot"></tfoot>
+        </table>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
