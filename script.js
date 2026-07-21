@@ -31,8 +31,8 @@ function isOpen(){
 }
 //add event listener to the activity button to show full activity
 const btn = document.querySelector('.btn')
-btn.addEventListener('click', event => {
-   const container = document.querySelector('.activity-group')
+const container = document.querySelector('.activity-group')
+btn.addEventListener('click', () => {
    container.classList.toggle('full-activity')
    container.classList.contains('full-activity')? btn.textContent = "Show Less" : btn.textContent = "View All"
       
