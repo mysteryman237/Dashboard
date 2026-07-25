@@ -540,3 +540,69 @@ td, th{
   visibility: visible;
   pointer-events: auto;
 }
+/* Delete modal styles */
+#delete-modal{
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  position: fixed;
+  width: 300px;
+  height: 250px;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  background-color: #e2e5ec;
+  border-radius: 15px;
+  z-index: 90;
+}
+.showModal{
+  visibility: visible;
+}
+.modal-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: cornsilk;
+  color: rgb(235, 174, 20);
+  font-size: 30px;
+}
+.modal-title{
+  font-weight: 800;
+}
+.modal-information{
+  font-size: 14px;
+}
+.modal-actions{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.3rem;
+}
+.modal-actions .cancel-btn{
+  padding: 0.4rem 0.6rem;
+  font-size: 12px;
+  background-color: grey;
+  border: none;
+  color: white;
+}
+.modal-actions .cancel-btn:hover{
+  background-color: rgb(81, 78, 78);
+  cursor: pointer;
+}
+.modal-actions .confirm-delete{
+  padding: 0.4rem 0.6rem;
+  font-size: 12px;
+  background-color: rgb(228, 18, 18);
+  border: none;
+  color: white;
+}
+.modal-actions .confirm-delete:hover{
+  background-color: red;
+  cursor: pointer;
+}
