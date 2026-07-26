@@ -6,40 +6,40 @@ const overlay = document.querySelector('.overlay')
 const mainDasboard = document.querySelector('main')
 const navBar = document.querySelector('nav')
 
+const state = {
+   sideBarOpen : false,
+   deleteModalOpen : false,
+   overLayOpen : false,
+   SelectedOrderId : null,
+   mainState : false
+}
+class Controllers{
+
+   openSideBar(){
+       state.sideBarOpen = true
+       state.overLayOpen = true
+       state.mainState = false
+       state.sideBarOpen && sideBar.classList.add('showAside')
+      state.overLayOpen && overlay.classList.add('showOverlay')
+      !state.mainState && navBar.classList.add('hide')
+      !state.mainState && mainDasboard.classList.add('hide')
+   }
+   closeSideBar(){
+      state.sideBarOpen = false
+      state.overLayOpen = false
+      state.mainState = true
+    !state.sideBarOpen &&  sideBar.classList.remove('showAside')
+    !state.overLayOpen && overlay.classList.remove('showOverlay')
+    state.mainState && mainDasboard.classList.remove('hide')
+    state.mainState && navBar.classList.remove('hide')
+   }
+}
+const control = new Controllers()
+
 dashBMenuIcon.addEventListener('click', () => {
-   isClosed()
+   control.openSideBar()
 })
 sideBCloseIcon.addEventListener('click', () => {
-    isOpen()
-})
-overlay.addEventListener('click', () => {
-   isOpen()
-})
-// This function opens the sidebar and displays the overlay
-function isClosed(){
- sideBar.classList.add('showAside')
- overlay.classList.add('showOverlay')
- mainDasboard.classList.add('hide')
- navBar.classList.add('hide')
-}
-// This function closes the sidebar and hides the overlay
-function isOpen(){
- sideBar.classList.remove('showAside')
- overlay.classList.remove('showOverlay')
- mainDasboard.classList.remove('hide')
- navBar.classList.remove('hide')
-}
-//add event listener to the activity button to show full activity
-const btn = document.querySelector('.btn')
-const container = document.querySelector('.activity-group')
-btn.addEventListener('click', () => {
-   container.classList.toggle('full-activity')
-   container.classList.contains('full-activity')? btn.textContent = "Show Less" : btn.textContent = "View All"
-      
-})
-const statusCells = document.querySelectorAll('.status')
-statusCells.forEach(status => {
-   if(status.textContent === "Pending") status.style.color = 'gold'
-   if(status.textContent === "Delivered") status.style.color = 'green'
-   if(status.textContent === "Cancelled") status.style.color = 'red'
+   control.closeSideBar()
+   
 })

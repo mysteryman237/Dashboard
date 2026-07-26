@@ -341,39 +341,52 @@
               <th>Customer</th>
               <th>Amount</th>
               <th>Status</th>
+              <th></th>
             </tr>
           </thead>
           <tbody class="table-body">
             <tr>
-              <td>#9674</td>
-              <td>Peter</td>
-              <td class="amout">$30</td>
+              <td class="order-id">#9674</td>
+              <td class="customer-name">Peter</td>
+              <td class="amount">$30</td>
               <td class="status">Pending</td>
+              <td class="delete-cell">
+                <button class="table-deletebtn"><i class="fa-regular fa-trash-can"></i></button>
+              </td>
             </tr>
             <tr>
-              <td>#1322</td>
-              <td>James</td>
+              <td class="order-id">#1322</td>
+              <td class="customer-name">James</td>
               <td class="amount">$15</td>
               <td class="status">Delivered</td>
+              <td class="delete-cell">
+                <button class="table-deletebtn"><i class="fa-regular fa-trash-can"></i></button>
+              </td>
             </tr>
             <tr>
-              <td>#2457</td>
-              <td>John</td>
+              <td class="order-id">#2457</td>
+              <td class="customer-name">John</td>
               <td class="amount">$10</td>
               <td class="status">Pending</td>
+              <td class="delete-cell">
+                <button class="table-deletebtn"><i class="fa-regular fa-trash-can"></i></button>
+              </td>
             </tr>
             <tr>
-              <td>#9345</td>
-              <td>Andrew</td>
+              <td class="order-id">#9345</td>
+              <td class="customer-name">Andrew</td>
               <td class="amount">$15</td>
               <td class="status">Cancelled</td>
+              <td class="delete-cell">
+                <button class="table-deletebtn"><i class="fa-regular fa-trash-can"></i></button>
+              </td>
             </tr>
           </tbody>
           <tfoot class="table-foot"></tfoot>
         </table>
       </section>
     </main>
-    <div id="delete-modal">
+    <div class="delete-modal">
       <span class="modal-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
       <h5 class="modal-title">Delete Order</h5>
       <p class="modal-information">
