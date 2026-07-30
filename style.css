@@ -382,6 +382,10 @@ aside {
 .table-section{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  box-shadow: 0 0 10px rgb(173, 164, 164);
+  border-radius: 10px;
   align-items: center;
   padding: 0.5rem;
 }
@@ -399,15 +403,11 @@ td, th{
   color: white;
 }
 .table-body tr{
-  border-bottom: 1px solid lightgray;
+  background-color: rgb(231, 240, 243);
 }
 .table-section .amount{
   font-size: 14px;
   font-weight: 500;
-  text-align: center;
-}
-.table-body .customer-name{
-  text-align: center;
 }
 .table-section tr:hover{
   background-color: #8B90A0;

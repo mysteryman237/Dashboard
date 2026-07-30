@@ -12,8 +12,17 @@ const orderId = document.querySelector(".modal-ordernumber");
 const state = {
   sideBarOpen: false,
   deleteModalOpen: false,
-  selectedOrderId: "",
 };
+// we create a state that stores all orders
+const allOrder = {
+  orders: [
+    {id: 9674, customerName: 'Peter', amount: 50, status: 'Pending'},
+    {id: 1322, customerName: 'James', amount: 15, status: 'Delivered'},
+    {id: 2457, customerName: 'John', amount: 10, status: 'Pending'},
+    {id: 9345, customerName: 'Andrew', amount: 40, status: 'Cancelled'}
+  ],
+  selectedOrderId: ""
+}
 // Controller class that contains all methods to only update state variables of the dashboard
 class Controller {
   openSideBar() {
@@ -83,25 +92,46 @@ sideBCloseIcon.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
   control.onOverLayClick();
 });
+//We want to make the dashBoard dynamic by making it render through data
+//We create method that render tr dynamically
+function renderTr(data){
+ return `
+ <tr data-id="${data.id}">
+  <td class="order-id">${"#" + data.id}</td>
+  <td class="customer-name">${data.customerName}</td>
+  <td class="amount">${"$" + data.amount}</td>
+  <td class="status">${data.status}</td>
+  <td class="delete-cell">
+  <button class="table-deletebtn"><i class="fa-regular fa-trash-can"></i></button>
+   </td>
+   </tr>
+   `
+}
+// map table row to all orders and append to body at the end
+function renderData(){
+ const html = allOrder.orders.map(order => renderTr(order)).join("")
+  document.querySelector('.table-body').innerHTML = html
+}
+renderData()
 //Get all the delete buttons on the table and add event listeners to them
-const deleteCellBtn = document.querySelectorAll(".delete-cell");
+const deleteCellBtn = document.querySelector(".table-body");
 const confirmDeleteBtn = document.querySelector(".confirm-delete");
 const cancelDeleteBtn = document.querySelector(".cancel-btn");
 
-deleteCellBtn.forEach((cell) => {
-  cell.addEventListener("click", () => {
-    state.selectedOrderId = cell.parentNode.firstElementChild.textContent;
-    control.openDeleteModal();
+// we add event listener to our tbody then use event delegation to get the clicked element
+// then update the application state and displace the delete modal
+deleteCellBtn.addEventListener("click", (event) => {
+    if(event.target.closest('.table-deletebtn')){
+      let clickedOrder = event.target.closest('tr')
+      allOrder.selectedOrderId = Number(clickedOrder.dataset.id)
+      control.openDeleteModal();
+    }
   });
-});
+  // We put event listener to the delete modal button then filter our state and rerender our data
 confirmDeleteBtn.addEventListener("click", () => {
-   const allOrderIds = document.querySelectorAll('.order-id');
-   const tdToDelete = Array.from(allOrderIds).find(td =>
-    td.textContent === state.selectedOrderId
-   )
-   if(tdToDelete)
-    tdToDelete.parentNode.remove()
-  control.closeDeleteModal();
+allOrder.orders = allOrder.orders.filter(order => order.id !== allOrder.selectedOrderId)
+  renderData();
+   control.closeDeleteModal();
 });
 cancelDeleteBtn.addEventListener("click", () => {
   control.closeDeleteModal();
